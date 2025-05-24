@@ -74,7 +74,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
           ),
-      
+
           // Main content
           SafeArea(
             child: SingleChildScrollView(
@@ -83,7 +83,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 40),
-            
+
                   // App logo or icon
                   CircleAvatar(
                     radius: 50,
@@ -94,9 +94,9 @@ class _SignupScreenState extends State<SignupScreen> {
                       color: Colors.deepPurple.shade700,
                     ),
                   ),
-            
+
                   const SizedBox(height: 24),
-            
+
                   // App name
                   const Text(
                     'Create Account',
@@ -106,17 +106,17 @@ class _SignupScreenState extends State<SignupScreen> {
                       color: Colors.deepPurple,
                     ),
                   ),
-            
+
                   const SizedBox(height: 8),
-            
+
                   // Tagline
                   Text(
                     'Join Story Teller to create amazing stories',
                     style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
                   ),
-            
+
                   const SizedBox(height: 40),
-            
+
                   // Signup form
                   Form(
                     key: _formKey,
@@ -130,6 +130,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             labelText: 'Full Name',
                             prefixIcon: const Icon(Icons.person_outline),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
@@ -142,9 +143,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             return null;
                           },
                         ),
-            
+
                         const SizedBox(height: 16),
-            
+
                         // Email field
                         TextFormField(
                           controller: _emailController,
@@ -153,6 +154,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             labelText: 'Email',
                             prefixIcon: const Icon(Icons.email_outlined),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
@@ -170,9 +172,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             return null;
                           },
                         ),
-            
+
                         const SizedBox(height: 16),
-            
+
                         // Password field
                         TextFormField(
                           controller: _passwordController,
@@ -193,6 +195,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                             ),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
@@ -208,9 +211,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             return null;
                           },
                         ),
-            
+
                         const SizedBox(height: 16),
-            
+
                         // Confirm Password field
                         TextFormField(
                           controller: _confirmPasswordController,
@@ -232,6 +235,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                             ),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
@@ -247,9 +251,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             return null;
                           },
                         ),
-            
+
                         const SizedBox(height: 24),
-            
+
                         // Error message
                         if (_errorMessage != null)
                           Container(
@@ -265,9 +269,9 @@ class _SignupScreenState extends State<SignupScreen> {
                               style: TextStyle(color: Colors.red.shade800),
                             ),
                           ),
-            
+
                         if (_errorMessage != null) const SizedBox(height: 16),
-            
+
                         // Sign Up button
                         SizedBox(
                           width: double.infinity,
@@ -298,9 +302,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                     ),
                           ),
                         ),
-            
+
                         const SizedBox(height: 24),
-            
+
                         // Login link
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

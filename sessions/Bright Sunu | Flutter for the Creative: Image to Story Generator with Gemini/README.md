@@ -75,6 +75,9 @@ image selections.
 
 4. Gemini API Setup
    - Create a project in Firebase Console
+   - Go to (Google Cloud Platform)[https://console.cloud.google.com/welcome]
+   - Go to billing manager at the left panel and attach the billing account to the project you created on Firebase Console
+   - Return to Firebase console and Go to AI Logic
    - Enable Gemini API
    - Enable Vertex ai
 

@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "dev.etornam.story_teller"
+    namespace = "com.example.story_teller"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "dev.etornam.story_teller"
+        applicationId = "com.example.story_teller"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

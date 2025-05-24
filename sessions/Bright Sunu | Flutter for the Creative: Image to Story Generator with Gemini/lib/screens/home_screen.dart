@@ -28,57 +28,61 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Profile avatar
-            CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.deepPurple.shade100,
-              backgroundImage:
-                  user?.photoURL != null ? NetworkImage(user!.photoURL!) : null,
-              child:
-                  user?.photoURL == null
-                      ? Text(
-                        displayName.isNotEmpty
-                            ? displayName[0].toUpperCase()
-                            : '?',
-                        style: TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.deepPurple.shade700,
-                        ),
-                      )
-                      : null,
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Welcome, $displayName!',
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Ready to create amazing stories?',
-              style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
-            ),
-            const SizedBox(height: 40),
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.pushNamed(context, '/create-story');
-              },
-              icon: const Icon(Icons.create),
-              label: const Text('Create New Story'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 12,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Profile avatar
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.deepPurple.shade100,
+                backgroundImage:
+                    user?.photoURL != null ? NetworkImage(user!.photoURL!) : null,
+                child:
+                    user?.photoURL == null
+                        ? Text(
+                          displayName.isNotEmpty
+                              ? displayName[0].toUpperCase()
+                              : '?',
+                          style: TextStyle(
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.deepPurple.shade700,
+                          ),
+                        )
+                        : null,
+              ),
+              const SizedBox(height: 24),
+              Text(
+                'Welcome, $displayName!',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Ready to create amazing stories?',
+                style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
+              ),
+              const SizedBox(height: 40),
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/create-story');
+                },
+                icon: const Icon(Icons.create),
+                label: const Text('Create New Story'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

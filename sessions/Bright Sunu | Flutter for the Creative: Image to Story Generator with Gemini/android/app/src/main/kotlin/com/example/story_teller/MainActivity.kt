@@ -1,4 +1,4 @@
-package dev.etornam.story_teller
+package com.example.story_teller
 
 import io.flutter.embedding.android.FlutterActivity
 

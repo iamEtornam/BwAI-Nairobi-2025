@@ -146,6 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             labelText: 'Email',
                             prefixIcon: const Icon(Icons.email_outlined),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
@@ -186,6 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                             ),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: .5),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             filled: true,
